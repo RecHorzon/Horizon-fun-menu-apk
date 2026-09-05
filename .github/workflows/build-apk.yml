@@ -1,0 +1,59 @@
+name: Build Horizon Fun Menu APK
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Apktool
+        run: |
+          mkdir -p "$RUNNER_TEMP/apktool"
+          curl -fsSL https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -o "$RUNNER_TEMP/apktool/apktool"
+          curl -fsSL https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar -o "$RUNNER_TEMP/apktool/apktool.jar"
+          chmod +x "$RUNNER_TEMP/apktool/apktool"
+          echo "$RUNNER_TEMP/apktool" >> "$GITHUB_PATH"
+
+      - name: Read version and build APK
+        id: build
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF_NAME" == v* ]]; then
+            version="${GITHUB_REF_NAME#v}"
+          else
+            version="$(awk '/^versionName:/{print $2}' apktool.yml)"
+          fi
+          apk_name="horizon-${version}.apk"
+          apktool b . -o "$apk_name"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "apk_name=$apk_name" >> "$GITHUB_OUTPUT"
+
+      - name: Upload unsigned APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: horizon-${{ steps.build.outputs.version }}
+          path: ${{ steps.build.outputs.apk_name }}
+          if-no-files-found: error
+
+      - name: Publish tagged release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: ${{ steps.build.outputs.apk_name }}

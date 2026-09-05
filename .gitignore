@@ -1,0 +1,10 @@
+# Apktool/build output
+build/
+dist/
+*.apk
+*.apks
+
+# Local tooling/cache files
+.gradle/
+.idea/
+bin/
