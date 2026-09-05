@@ -80,6 +80,12 @@
 
 .field public static open_settings_button:I = 0x7f03003c
 
+.field public static disconnect_adb_button:I = 0x7f03003d
+
+.field public static background_on_button:I = 0x7f03003e
+
+.field public static background_off_button:I = 0x7f03003f
+
 .field public static long_arms_slider:I = 0x7f03003a
 
 .field public static mapping_status:I = 0x7f03001e
