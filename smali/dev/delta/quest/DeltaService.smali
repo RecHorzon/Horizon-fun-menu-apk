@@ -2429,7 +2429,7 @@
 .end method
 
 .method private parseInputLine(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     .line 209
     invoke-static {p1}, Ldev/delta/quest/DeltaService$ParsedInput;->from(Ljava/lang/String;)Ldev/delta/quest/DeltaService$ParsedInput;
@@ -2442,7 +2442,7 @@
 
     .line 211
     :cond_0
-    move-object v4, v0
+    move-object v5, v0
 
     invoke-direct {p0, p1, v0}, Ldev/delta/quest/DeltaService;->recordTraceEvent(Ljava/lang/String;Ldev/delta/quest/DeltaService$ParsedInput;)V
 
@@ -2572,13 +2572,13 @@
     :cond_5
     iget-object v3, p0, Ldev/delta/quest/DeltaService;->inputBCode:Ljava/lang/String;
 
-    invoke-virtual {v4, v3}, Ldev/delta/quest/DeltaService$ParsedInput;->matches(Ljava/lang/String;)Z
+    invoke-virtual {v5, v3}, Ldev/delta/quest/DeltaService$ParsedInput;->matches(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    invoke-virtual {v4}, Ldev/delta/quest/DeltaService$ParsedInput;->isActive()Z
+    invoke-virtual {v5}, Ldev/delta/quest/DeltaService$ParsedInput;->isActive()Z
 
     move-result v3
 
