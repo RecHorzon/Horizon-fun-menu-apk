@@ -3671,6 +3671,42 @@
     return-void
 .end method
 
+.method public disconnectAdb(Landroid/view/View;)V
+    .locals 1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class p1, Ldev/delta/quest/DeltaService;
+
+    invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v0}, Ldev/delta/quest/MainActivity;->stopService(Landroid/content/Intent;)Z
+
+    return-void
+.end method
+
+.method public turnBackgroundOn(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0}, Ldev/delta/quest/MainActivity;->connect()V
+
+    return-void
+.end method
+
+.method public turnBackgroundOff(Landroid/view/View;)V
+    .locals 1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class p1, Ldev/delta/quest/DeltaService;
+
+    invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v0}, Ldev/delta/quest/MainActivity;->stopService(Landroid/content/Intent;)Z
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -4148,9 +4184,6 @@
     const/4 v2, 0x4
 
     invoke-virtual {p0, v0, v1, v2}, Ldev/delta/quest/MainActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
-
-    .line 464
-    invoke-direct {p0}, Ldev/delta/quest/MainActivity;->connect()V
 
     const/4 v0, 0x1
 

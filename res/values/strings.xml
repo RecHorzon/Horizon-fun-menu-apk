@@ -17,7 +17,7 @@
     <string name="car_speed_medium">Car Speed: MEDIUM</string>
     <string name="car_speed_slow">Car Speed: SLOW</string>
     <string name="cleanup_all">Reset All Runtime Overrides</string>
-    <string name="connect">Connect</string>
+    <string name="connect">Connect ADB</string>
     <string name="connected">Connected</string>
     <string name="controller_normal">Movement uses controller override NONE. Guardian turns OFF after connecting and can be restored here.</string>
     <string name="diagnostics_tab">Diagnostics</string>
@@ -50,6 +50,9 @@ B: %4$s"</string>
     <string name="next">Next</string>
     <string name="not_connected">Not connected</string>
     <string name="open_android_settings">Open Android Settings</string>
+    <string name="disconnect_adb">Disconnect ADB</string>
+    <string name="background_on">Turn Background On</string>
+    <string name="background_off">Turn Background Off</string>
     <string name="pose_pending">Controller Pose API: PENDING PROBE</string>
     <string name="probe_connect_first">Probe: connect ADB first</string>
     <string name="probe_idle">Probe: not run</string>

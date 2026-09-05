@@ -81,6 +81,9 @@
     <public type="id" name="long_arms_slider" id="0x7f03003a" />
     <public type="id" name="long_arms_label" id="0x7f03003b" />
     <public type="id" name="open_settings_button" id="0x7f03003c" />
+    <public type="id" name="disconnect_adb_button" id="0x7f03003d" />
+    <public type="id" name="background_on_button" id="0x7f03003e" />
+    <public type="id" name="background_off_button" id="0x7f03003f" />
     <public type="layout" name="activity_main" id="0x7f040000" />
     <public type="string" name="about_horizon_fun_menu" id="0x7f050000" />
     <public type="string" name="airstrike" id="0x7f050001" />
@@ -163,6 +166,9 @@
     <public type="string" name="long_arms_on" id="0x7f05004e" />
     <public type="string" name="long_arms_offset_label" id="0x7f05004f" />
     <public type="string" name="open_android_settings" id="0x7f050050" />
+    <public type="string" name="disconnect_adb" id="0x7f050051" />
+    <public type="string" name="background_on" id="0x7f050052" />
+    <public type="string" name="background_off" id="0x7f050053" />
     <public type="style" name="DeltaButton" id="0x7f060000" />
     <public type="style" name="DeltaText" id="0x7f060001" />
     <public type="style" name="Theme.Delta" id="0x7f060002" />

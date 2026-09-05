@@ -61,4 +61,7 @@
     <item type="id" name="long_arms_slider" />
     <item type="id" name="long_arms_label" />
     <item type="id" name="open_settings_button" />
+    <item type="id" name="disconnect_adb_button" />
+    <item type="id" name="background_on_button" />
+    <item type="id" name="background_off_button" />
 </resources>

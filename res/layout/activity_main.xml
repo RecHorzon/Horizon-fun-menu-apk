@@ -22,8 +22,11 @@
                     <Button android:id="@id/connect_button" android:text="@string/connect" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_shooting_star" style="@style/DeltaButton" />
                     <Button android:id="@id/wifi_disconnect_button" android:layout_marginTop="10.0dip" android:text="@string/wifi_disconnect" style="@style/DeltaButton" />
                     <Button android:id="@id/open_settings_button" android:layout_marginTop="10.0dip" android:text="@string/open_android_settings" android:onClick="openAndroidSettings" style="@style/DeltaButton" />
-                    <Button android:id="@id/movement_tab_button" android:layout_marginTop="10.0dip" android:text="@string/movement_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_movement" style="@style/DeltaButton" />
-                    <Button android:id="@id/locomotion_tab_button" android:layout_marginTop="10.0dip" android:text="@string/locomotion_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_locomotion" style="@style/DeltaButton" />
+                    <Button android:id="@id/disconnect_adb_button" android:layout_marginTop="10.0dip" android:text="@string/disconnect_adb" android:onClick="disconnectAdb" style="@style/DeltaButton" />
+                    <Button android:id="@id/background_on_button" android:layout_marginTop="10.0dip" android:text="@string/background_on" android:onClick="turnBackgroundOn" style="@style/DeltaButton" />
+                    <Button android:id="@id/background_off_button" android:layout_marginTop="10.0dip" android:text="@string/background_off" android:onClick="turnBackgroundOff" style="@style/DeltaButton" />
+                    <Button android:id="@id/movement_tab_button" android:visibility="gone" android:layout_marginTop="10.0dip" android:text="@string/movement_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_movement" style="@style/DeltaButton" />
+                    <Button android:id="@id/locomotion_tab_button" android:visibility="gone" android:layout_marginTop="10.0dip" android:text="@string/locomotion_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_locomotion" style="@style/DeltaButton" />
                 </LinearLayout>
             </ScrollView>
             <ScrollView android:id="@id/home_page_two" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
@@ -37,8 +40,8 @@
             </ScrollView>
         </FrameLayout>
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
-            <Button android:id="@id/home_back_button" android:visibility="invisible" android:layout_width="0.0dip" android:text="@string/back" android:layout_weight="1.0" style="@style/DeltaButton" />
-            <Button android:id="@id/home_next_button" android:layout_width="0.0dip" android:text="@string/next" android:layout_weight="1.0" android:layout_marginStart="10.0dip" style="@style/DeltaButton" />
+            <Button android:id="@id/home_back_button" android:visibility="gone" android:layout_width="0.0dip" android:text="@string/back" android:layout_weight="1.0" style="@style/DeltaButton" />
+            <Button android:id="@id/home_next_button" android:visibility="gone" android:layout_width="0.0dip" android:text="@string/next" android:layout_weight="1.0" android:layout_marginStart="10.0dip" style="@style/DeltaButton" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout android:orientation="vertical" android:id="@id/content_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
