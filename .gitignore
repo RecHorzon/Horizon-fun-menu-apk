@@ -3,6 +3,7 @@ build/
 dist/
 *.apk
 *.apks
+*.idsig
 
 # Local tooling/cache files
 .gradle/
