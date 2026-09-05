@@ -3658,13 +3658,23 @@
 .end method
 
 .method public openAndroidSettings(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-virtual {p0}, Ldev/delta/quest/MainActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    const-string v1, "android.settings.SETTINGS"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    const-string v1, "com.oculus.vrshell"
+
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "intent_data"
+
+    const-string v2, "systemux://settings"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Ldev/delta/quest/MainActivity;->startActivity(Landroid/content/Intent;)V
 
