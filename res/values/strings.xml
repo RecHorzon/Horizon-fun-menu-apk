@@ -49,6 +49,7 @@ B: %4$s"</string>
     <string name="movement_tab">Movement</string>
     <string name="next">Next</string>
     <string name="not_connected">Not connected</string>
+    <string name="open_android_settings">Open Android Settings</string>
     <string name="pose_pending">Controller Pose API: PENDING PROBE</string>
     <string name="probe_connect_first">Probe: connect ADB first</string>
     <string name="probe_idle">Probe: not run</string>

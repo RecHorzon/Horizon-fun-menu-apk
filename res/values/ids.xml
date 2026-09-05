@@ -60,4 +60,5 @@
     <item type="id" name="long_arms_button" />
     <item type="id" name="long_arms_slider" />
     <item type="id" name="long_arms_label" />
+    <item type="id" name="open_settings_button" />
 </resources>

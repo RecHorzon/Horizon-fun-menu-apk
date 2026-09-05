@@ -21,6 +21,7 @@
                 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <Button android:id="@id/connect_button" android:text="@string/connect" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_shooting_star" style="@style/DeltaButton" />
                     <Button android:id="@id/wifi_disconnect_button" android:layout_marginTop="10.0dip" android:text="@string/wifi_disconnect" style="@style/DeltaButton" />
+                    <Button android:id="@id/open_settings_button" android:layout_marginTop="10.0dip" android:text="@string/open_android_settings" android:onClick="openAndroidSettings" style="@style/DeltaButton" />
                     <Button android:id="@id/movement_tab_button" android:layout_marginTop="10.0dip" android:text="@string/movement_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_movement" style="@style/DeltaButton" />
                     <Button android:id="@id/locomotion_tab_button" android:layout_marginTop="10.0dip" android:text="@string/locomotion_tab" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_locomotion" style="@style/DeltaButton" />
                 </LinearLayout>

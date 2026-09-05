@@ -3657,6 +3657,20 @@
     return-void
 .end method
 
+.method public openAndroidSettings(Landroid/view/View;)V
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.settings.SETTINGS"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Ldev/delta/quest/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
