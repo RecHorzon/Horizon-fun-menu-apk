@@ -78,6 +78,8 @@
 
 .field public static long_arms_label:I = 0x7f03003b
 
+.field public static open_settings_button:I = 0x7f03003c
+
 .field public static long_arms_slider:I = 0x7f03003a
 
 .field public static mapping_status:I = 0x7f03001e
