@@ -2442,6 +2442,8 @@
 
     .line 211
     :cond_0
+    move-object v4, v0
+
     invoke-direct {p0, p1, v0}, Ldev/delta/quest/DeltaService;->recordTraceEvent(Ljava/lang/String;Ldev/delta/quest/DeltaService$ParsedInput;)V
 
     .line 213
@@ -2568,6 +2570,23 @@
     goto :goto_1
 
     :cond_5
+    iget-object v3, p0, Ldev/delta/quest/DeltaService;->inputBCode:Ljava/lang/String;
+
+    invoke-virtual {v4, v3}, Ldev/delta/quest/DeltaService$ParsedInput;->matches(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {v4}, Ldev/delta/quest/DeltaService$ParsedInput;->isActive()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {p0}, Ldev/delta/quest/DeltaService;->disableWifiForFiveSeconds()V
+
+    :cond_7
     :goto_2
     if-eqz p1, :cond_6
 
