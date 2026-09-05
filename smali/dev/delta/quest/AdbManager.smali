@@ -247,7 +247,7 @@
 .end method
 
 .method private connectBlocking()V
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x0
 
@@ -319,15 +319,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    :try_start_1
-    invoke-direct {p0}, Ldev/delta/quest/AdbManager;->findLocalAdbSocket()V
+    const/4 v7, 0x0
 
-    move-result-object v3
+    :try_start_1
+    invoke-direct {p0}, Ldev/delta/quest/AdbManager;->findLocalAdbSocket()Ljava/net/Socket;
+
+    move-result-object v7
 
     const/4 v1, 0x1
 
     .line 114
-    invoke-static {v3, v2}, Lcom/tananaev/adblib/AdbConnection;->create(Ljava/net/Socket;Lcom/tananaev/adblib/AdbCrypto;)Lcom/tananaev/adblib/AdbConnection;
+    invoke-static {v7, v2}, Lcom/tananaev/adblib/AdbConnection;->create(Ljava/net/Socket;Lcom/tananaev/adblib/AdbCrypto;)Lcom/tananaev/adblib/AdbConnection;
 
     move-result-object v2
 
@@ -348,7 +350,7 @@
 
     .line 121
     :try_start_2
-    iput-object v3, p0, Ldev/delta/quest/AdbManager;->socket:Ljava/net/Socket;
+    iput-object v7, p0, Ldev/delta/quest/AdbManager;->socket:Ljava/net/Socket;
 
     .line 122
     iput-object v2, p0, Ldev/delta/quest/AdbManager;->connection:Lcom/tananaev/adblib/AdbConnection;
@@ -397,7 +399,7 @@
     :catch_0
     move-exception v2
 
-    move-object v1, v3
+    move-object v1, v7
 
     goto :goto_1
 

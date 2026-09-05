@@ -1,5 +1,5 @@
 version: 2.10.0
-apkFileName: horizon-2.1.0.apk
+apkFileName: horizon-2.1.1.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -13,7 +13,7 @@ packageInfo:
   renameManifestPackage: null
 versionInfo:
   versionCode: 7
-  versionName: 2.1.0
+  versionName: 2.1.1
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
