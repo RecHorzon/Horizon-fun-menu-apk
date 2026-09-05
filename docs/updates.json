@@ -2,6 +2,7 @@
   "schema": 1,
   "app": "Horizon Fun Menu",
   "manifestUrl": "https://rechorzon.github.io/Horizon-fun-menu-apk/updates.json",
-  "menuVersion": 1,
+  "appVersion": "2.1.0",
+  "menuVersion": 2,
   "mods": []
 }
